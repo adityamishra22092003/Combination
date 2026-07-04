@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>COMBINATION — A Heist in Three Locks</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav>
+  <div class="brand">COMBI<span>NATION</span></div>
+  <a>The lock of code</a>
+  <a>The logic of us</a>
+  <a>The vault of you</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-grid">
+    <div>
+      <span class="eyebrow">make space for logic</span>
+      <h1 class="headline">A Heist<br>in <em>Three</em><br>Locks</h1>
+      <p class="tag">You're the new runner. Ravel talks through your earpiece, you write the code that gets the crew through the building. Every lock teaches the idea you need for the next one — and there's a quick check after each one to make sure it stuck.</p>
+    </div>
+    <div class="collage">
+      <svg viewBox="0 0 420 280">
+        <defs>
+          <pattern id="dots" width="9" height="9" patternUnits="userSpaceOnUse">
+            <circle cx="1.4" cy="1.4" r="1.4" fill="#171a34" opacity=".35"/>
+          </pattern>
+        </defs>
+        <!-- sun -->
+        <circle cx="230" cy="95" r="72" fill="#f3c02e"/>
+        <!-- blue mountain -->
+        <polygon points="150,240 250,40 340,240" fill="#3a4695" opacity=".92"/>
+        <!-- buildings -->
+        <g fill="#171a34">
+          <rect x="120" y="150" width="26" height="95"/>
+          <rect x="150" y="120" width="30" height="125"/>
+          <rect x="184" y="160" width="24" height="85"/>
+          <rect x="212" y="100" width="28" height="145"/>
+        </g>
+        <g fill="#fff" opacity=".85">
+          <rect x="126" y="160" width="5" height="6"/><rect x="136" y="160" width="5" height="6"/>
+          <rect x="126" y="176" width="5" height="6"/><rect x="136" y="176" width="5" height="6"/>
+          <rect x="157" y="132" width="5" height="6"/><rect x="168" y="132" width="5" height="6"/>
+          <rect x="157" y="150" width="5" height="6"/><rect x="168" y="150" width="5" height="6"/>
+          <rect x="219" y="112" width="5" height="6"/><rect x="230" y="112" width="5" height="6"/>
+          <rect x="219" y="130" width="5" height="6"/><rect x="230" y="130" width="5" height="6"/>
+        </g>
+        <!-- halftone cloud base -->
+        <ellipse cx="230" cy="252" rx="150" ry="26" fill="url(#dots)"/>
+        <!-- coral lock badge -->
+        <circle cx="360" cy="60" r="34" fill="#ef5b4e"/>
+        <g transform="translate(346,46)" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="4" y="12" width="20" height="16" rx="2"/>
+          <path d="M8,12 V8 a6,6 0 0 1 12,0 v4"/>
+        </g>
+        <!-- scribble arrow -->
+        <path d="M20,60 C60,30 90,80 130,55" stroke="#171a34" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <polygon points="126,48 138,55 124,62" fill="#171a34"/>
+      </svg>
+    </div>
+  </div>
+
+  <div class="flagline">
+    <svg viewBox="0 0 1040 150" preserveAspectRatio="none">
+      <path id="progressPath" d="M 10,120 C 220,110 300,80 480,65 C 660,50 780,30 1020,15"
+            fill="none" stroke="#171a34" stroke-width="2" stroke-dasharray="1 7" stroke-linecap="round"/>
+      <path id="progressFill" d="M 10,120 C 220,110 300,80 480,65 C 660,50 780,30 1020,15"
+            fill="none" stroke="#4caf82" stroke-width="3" stroke-linecap="round"
+            stroke-dasharray="1200" stroke-dashoffset="1200"/>
+    </svg>
+    <div class="flag-label" data-lock="0" style="left:6%; top:78%; background:var(--coral);"><span class="num">01</span>Variables</div>
+    <div class="flag-label" data-lock="1" style="left:37%; top:52%; background:var(--green);"><span class="num">02</span>Conditionals</div>
+    <div class="flag-label" data-lock="2" style="left:66%; top:30%; background:var(--blue);"><span class="num">03</span>Functions</div>
+    <div class="flag-label" data-lock="3" style="left:95%; top:9%; background:var(--sun); color:var(--ink);"><span class="num">04</span>The Vault</div>
+  </div>
+</div>
+
+<hr class="rule">
+
+<div class="wrap">
+  <div class="stage">
+    <div class="panel light">
+      <div class="panel-head"><span>Comm Link — Ravel</span><span id="actLabel">LOCK 1</span></div>
+      <div id="story"></div>
+    </div>
+
+    <div class="panel dark">
+      <div id="brief"></div>
+      <div class="panel-head"><span>Your Console</span><span>JavaScript</span></div>
+      <textarea id="codearea" spellcheck="false"></textarea>
+      <div id="testfeed"></div>
+      <div class="code-footer">
+        <button class="run" id="runBtn">Run ▸</button>
+        <button class="reset" id="resetBtn">Reset code</button>
+        <button class="hint-toggle" id="hintBtn">need a hint?</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>COMBINATION — prototype build · a story-driven way to learn variables, conditionals &amp; functions. <span class="footer-highlight"></span>.</footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
